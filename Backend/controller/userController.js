@@ -17,6 +17,7 @@ export const simulateDiseaseDetection = async (req, res) => {
   }
 };
 
+
 export const aiChat = async(req,res)=>{
   try {
 

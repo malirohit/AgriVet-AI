@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL + "/api";
+
 const mlUrl = import.meta.env.VITE_ML_API_URL;
 
 const api = axios.create({
@@ -47,7 +48,7 @@ export const getAIRemedy = async ( animalName:string, diseaseName:string)=>{
 
 }
 
-
+// Chatbot Api
 export const chatWithAi = async (message:string)=>{
   const res = await api.post("/user/ai-chat",{message});
   return res.data.reply;
