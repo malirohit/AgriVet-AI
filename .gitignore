@@ -1,0 +1,75 @@
+
+# First
+# node_modules/
+# .env
+# dist/
+# build/
+
+# Second
+
+# node_modules/
+# .venv/
+# env/
+# dataset/
+# models/
+# *.pt
+# *.pth
+# *.pkl
+# *.h5
+# *.zip
+# dist/
+# build/
+# Model/
+# *.pth
+# Model/
+# *.pth
+# venv/
+# __pycache__/
+
+# Environment variables
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Machine Learning model weights (large files)
+*.pt
+*.pth
+*.pkl
+*.h5
+
+# Dataset folders
+dataset/
+data/
+Model/data/
+
+# Model virtual environment
+Model/venv/
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.tar
+*.gz
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

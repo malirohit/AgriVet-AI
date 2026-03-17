@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 20% 97%;
+    --foreground: 140 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 15%;
+
+    --primary: 122 52% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 122 38% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 60 10% 92%;
+    --muted-foreground: 140 10% 40%;
+
+    --accent: 16 25% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --highlight: 45 96% 58%;
+    --highlight-foreground: 140 30% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 85%;
+    --input: 140 15% 85%;
+    --ring: 122 52% 33%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 122 20% 96%;
+    --sidebar-foreground: 140 30% 15%;
+    --sidebar-primary: 122 52% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 122 15% 90%;
+    --sidebar-accent-foreground: 140 30% 15%;
+    --sidebar-border: 140 15% 85%;
+    --sidebar-ring: 122 52% 33%;
+
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .dark {
+    --background: 140 30% 8%;
+    --foreground: 60 20% 95%;
+    --card: 140 25% 12%;
+    --card-foreground: 60 20% 95%;
+    --popover: 140 25% 12%;
+    --popover-foreground: 60 20% 95%;
+    --primary: 122 52% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 122 38% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 140 20% 18%;
+    --muted-foreground: 140 10% 60%;
+    --accent: 16 25% 50%;
+    --accent-foreground: 0 0% 100%;
+    --highlight: 45 96% 58%;
+    --highlight-foreground: 140 30% 15%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 140 20% 22%;
+    --input: 140 20% 22%;
+    --ring: 122 52% 40%;
+    --sidebar-background: 140 25% 10%;
+    --sidebar-foreground: 60 20% 95%;
+    --sidebar-primary: 122 52% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 20% 18%;
+    --sidebar-accent-foreground: 60 20% 95%;
+    --sidebar-border: 140 20% 22%;
+    --sidebar-ring: 122 52% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+}

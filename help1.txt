@@ -1,0 +1,16 @@
+🛠 Best Practice (Always Works)
+
+Always install packages like this:
+
+python -m pip install <package>
+
+Example:
+
+python -m pip install flask flask-cors torch matplotlib seaborn
+
+This guarantees installation in the current environment.
+
+Start ML API
+cd VetAI/Model
+venv\Scripts\activate
+python api.py
