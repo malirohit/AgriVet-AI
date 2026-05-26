@@ -2,6 +2,7 @@ export type UserRole = 'farmer' | 'doctor';
 
 export interface User {
   id: string;
+  profilePicture?:string,
   name: string;
   email: string;
   role: UserRole;

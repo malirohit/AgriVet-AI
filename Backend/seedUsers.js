@@ -58,108 +58,119 @@ const users = [
   },
 
   // Doctors near Farmer 1 locality (Akluj, Solapur)
-  {
-    name: "Doctor 01",
-    email: "doctor01@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Akluj",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Veterinary Medicine"
-  },
-  {
-    name: "Doctor 02",
-    email: "doctor02@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Akluj",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Surgery"
-  },
-  {
-    name: "Doctor 03",
-    email: "doctor03@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Akluj",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Skin Specialist"
-  },
-  {
-    name: "Doctor 04",
-    email: "doctor04@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Akluj",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Infection Specialist"
-  },
-  {
-    name: "Doctor 05",
-    email: "doctor05@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Akluj",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Veterinary Consultant"
-  },
+// Doctors near Farmer 1 locality (Akluj, Solapur)
+{
+  name: "Doctor 01",
+  email: "doctor01@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Akluj",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Veterinary Medicine",
+  contactNumber: "9876543201"
+},
+{
+  name: "Doctor 02",
+  email: "doctor02@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Akluj",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Surgery",
+  contactNumber: "9876543202"
+},
+{
+  name: "Doctor 03",
+  email: "doctor03@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Akluj",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Skin Specialist",
+  contactNumber: "9876543203"
+},
+{
+  name: "Doctor 04",
+  email: "doctor04@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Akluj",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Infection Specialist",
+  contactNumber: "9876543204"
+},
+{
+  name: "Doctor 05",
+  email: "doctor05@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Akluj",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Veterinary Consultant",
+  contactNumber: "9876543205"
+},
 
-  // Doctors near Farmer 2 locality
-  {
-    name: "Doctor 06",
-    email: "doctor06@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Barshi",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Surgery"
-  },
-  {
-    name: "Doctor 07",
-    email: "doctor07@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Barshi",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Veterinary Medicine"
-  },
-  {
-    name: "Doctor 08",
-    email: "doctor08@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Barshi",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Specialist"
-  },
-  {
-    name: "Doctor 09",
-    email: "doctor09@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Barshi",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Animal Infection Specialist"
-  },
-  {
-    name: "Doctor 10",
-    email: "doctor10@gmail.com",
-    password: "123456",
-    role: "doctor",
-    village: "Barshi",
-    city: "Solapur",
-    district: "Solapur",
-    specialization: "Veterinary Consultant"
-  }
+// Doctors near Farmer 2 locality
+{
+  name: "Doctor 06",
+  email: "doctor06@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Barshi",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Surgery",
+  contactNumber: "9876543206"
+},
+{
+  name: "Doctor 07",
+  email: "doctor07@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Barshi",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Veterinary Medicine",
+  contactNumber: "9876543207"
+},
+{
+  name: "Doctor 08",
+  email: "doctor08@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Barshi",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Specialist",
+  contactNumber: "9876543208"
+},
+{
+  name: "Doctor 09",
+  email: "doctor09@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Barshi",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Animal Infection Specialist",
+  contactNumber: "9876543209"
+},
+{
+  name: "Doctor 10",
+  email: "doctor10@gmail.com",
+  password: "123456",
+  role: "doctor",
+  village: "Barshi",
+  city: "Solapur",
+  district: "Solapur",
+  specialization: "Veterinary Consultant",
+  contactNumber: "9876543210"
+}
 
 ];
 

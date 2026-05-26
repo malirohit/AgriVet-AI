@@ -1,10 +1,48 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import userModel from "../models/User.js";
+import streamifier from "streamifier";
+import cloudinary from "../config/cloudinary.js";
 
 export const register = async (req, res) => {
   try {
-    const { name, email, password, role, city, district, village } = req.body;
+    const {
+      name,
+      email,
+      contactNumber,
+      password,
+      role,
+      city,
+      district,
+      village,
+      doctorAvailability,
+    } = req.body;
+
+    let profileImageUrl = "";
+
+    if (req.file) {
+      console.log("Received file:", req.file.originalname); // Debug log
+
+      const result = await new Promise((resolve, reject) => {
+        const stream = cloudinary.uploader.upload_stream(
+          {
+            folder: "agripet-profiles",
+          },
+          (error, result) => {
+            if (error) reject(error);
+            else resolve(result);
+          },
+        );
+
+        streamifier.createReadStream(req.file.buffer).pipe(stream);
+      });
+
+      profileImageUrl = result.secure_url;
+
+      console.log("Cloudinary Upload Result:", result); // Debug log
+    } else {
+      console.log("Profile Picture Not Received"); // Debug log
+    }
 
     const existingUser = await userModel.findOne({ email });
     if (existingUser) {
@@ -14,15 +52,25 @@ export const register = async (req, res) => {
       });
     }
 
+    const parsedAvailability =
+      typeof doctorAvailability === "string"
+        ? JSON.parse(doctorAvailability)
+        : doctorAvailability;
 
     const user = await userModel.create({
+      profilePicture: profileImageUrl,
       name,
       email,
+      contactNumber,
       password,
       role,
       city,
       district,
       village,
+      doctorAvailability:
+        role === "doctor"
+          ? parsedAvailability
+          : {},
     });
 
     const token = jwt.sign(
@@ -50,22 +98,22 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    console.log("Login Email:", email); // Debug log
-    console.log("Login Password:", password); // Debug log
-
     const user = await userModel.findOne({ email });
 
-    console.log("User Email :" , user.email)
-    console.log("User Password :", user.password)
+    console.log("User Email :", user.email);
+    console.log("User Password :", user.password);
 
     if (!user)
       return res
         .status(400)
         .json({ success: false, message: "User Not Found" });
 
+    console.log("Login Email:", email); // Debug log
+    console.log("Login Password:", password); // Debug log
+
     const isMatch = await bcrypt.compare(password, user.password);
 
-     if (!isMatch)
+    if (!isMatch)
       return res.status(400).json({
         success: false,
         message: "Wrong password",
